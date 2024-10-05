@@ -1,0 +1,280 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the footer is at the bottom */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 97%;
+            background-color: #007bff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            margin-left: 10%; /* Position the logo 10% from the left */
+        }
+
+        .logo i {
+            margin-right: 10px; /* Space between icon and logo text */
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 3px 0;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: #0056b3;
+        }
+
+        
+
+        .container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+h2 {
+    color: #007bff;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+
+
+  
+.footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  body {
+      padding: 10px;
+  }
+
+  .container {
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 1.5em;
+  }
+
+  h2 {
+      font-size: 1.2em;
+  }
+
+  p, li {
+      font-size: 0.9em;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-links {
+      flex-direction: column;
+  }
+}
+
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+          .navbar{
+            width: 93%;
+          }
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                width: 92.3%;
+                background-color: #007bff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            .nav-list li {
+                margin: 10px 0;
+            }
+
+         
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-image"></i> <!-- Font Awesome Icon -->
+            Logo
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contentus.html">Contact Us</a></li>
+         
+            <li><a href="teamcondition.html">Team & Conditions</a></li>
+            <li><a href="privacypolicey.html">Privacy Policy</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+
+
+    <!-- Main Content -->
+    <div class="container">
+      <h1>About Us</h1>
+      
+      <p>At Image Resizer Tool, we believe that everyone deserves an easy and efficient way to manage their images. Our platform was created with the goal of providing users with a straightforward solution for resizing images without sacrificing quality.</p>
+
+      <h2>Who We Are</h2>
+      <p>We are a dedicated team of tech enthusiasts passionate about making digital tools accessible to everyone. With years of experience in software development and graphic design, we understand the challenges users face when working with images.</p>
+
+      <h2>Our Mission</h2>
+      <p>Our mission is to empower users by providing a fast, user-friendly, and free image resizing tool. We strive to simplify the image editing process, whether you're a photographer looking to optimize your portfolio, a business owner needing images for your website, or anyone wanting to share their moments online.</p>
+
+      <h2>What We Offer</h2>
+      <ul>
+          <li><strong>User-Friendly Interface:</strong> Our tool is designed for ease of use, enabling you to resize images in just a few clicks.</li>
+          <li><strong>Quality Preservation:</strong> We ensure that your images maintain their quality even after resizing.</li>
+          <li><strong>Privacy First:</strong> Your images are processed securely and are not stored beyond your session, ensuring your privacy is respected.</li>
+      </ul>
+
+      <p>Join us on our journey to make image editing seamless for everyone!</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="footer-container">
+          <p>&copy; 2024 Image Resizer Tool. All rights reserved.</p>
+          <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+          </ul>
+      </div>
+  </footer>
+
+   
+      
+    <script>
+       
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Image Resizer Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 97%;
+            background-color: #007bff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            margin-left: 10%;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 3px 0;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin
+            : 10px 0;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                display: none; /* Hide nav links on mobile */
+            }
+
+            .menu-toggle {
+                display: flex; /* Show menu toggle on mobile */
+            }
+
+            .menu-toggle.active + .nav-list {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                background-color: #007bff;
+                width: 100%;
+                left: 0;
+                top: 50px;
+            }
+
+            .nav-list li {
+                margin: 0; /* No margin on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-image"></i>Image Resizer Tool
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us </a></li>
+                <li><a href="contentus.html">Contact</a></li>
+                <li><a href="teamcondition.html">Team Condition</a></li>
+                <li><a href="privacypolicey.html">privacypolicey</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Terms and Conditions</h1>
+        <p>Welcome to the Image Resizer Tool. By using our service, you are agreeing to the following terms and conditions:</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using our service, you agree to be bound by these terms. If you do not agree, please do not use our service.</p>
+
+        <h2>2. Use of Service</h2>
+        <p>You may use our service for personal, non-commercial purposes. Any unauthorized use is prohibited.</p>
+
+        <h2>3. User Responsibilities</h2>
+        <p>You are responsible for the content you upload. Ensure that you have the necessary rights or permissions to use the images.</p>
+
+        <h2>4. Limitation of Liability</h2>
+        <p>Our service is provided on an "as is" basis. We are not liable for any damages arising from your use of the service.</p>
+
+        <h2>5. Modifications</h2>
+        <p>We may update these terms from time to time. You will be notified of any changes, and continued use of the service constitutes acceptance of the new terms.</p>
+
+        <h2>6. Governing Law</h2>
+        <p>These terms are governed by the laws of your jurisdiction.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about these terms, please contact us at <a href="mailto:support@imageresizer.com">support@imageresizer.com</a>.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Image Resizer Tool. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

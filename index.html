@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Ultimate Guide to Image Resizer: Optimize Your Images to KB for Faster Web Performance</title>
+    <meta name="description" content="Discover how to effectively reduce image sizes to KB with our comprehensive guide on the best online image resizers. Improve website loading times, enhance user experience, and optimize your images for SEO effortlessly.">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+          
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the footer is at the bottom */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 97%;
+            background-color: #007bff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            margin-left: 10%; /* Position the logo 10% from the left */
+        }
+
+        .logo i {
+            margin-right: 10px; /* Space between icon and logo text */
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 3px 0;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            flex-grow: 1; /* Pushes footer to the bottom */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            margin: 20px 0;
+        }
+
+        input[type="number"] {
+            width: 70px;
+            margin: 0 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #output {
+            display: none;
+            margin: 20px auto;
+            max-width: 90%;
+            height: auto;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background: #0056b3;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        .footer .left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer .right {
+            max-width: 50%;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+          .navbar{
+            width: 93%;
+          }
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                width: 92.3%;
+                background-color: #007bff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            .nav-list li {
+                margin: 10px 0;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer .right {
+                max-width: 100%;
+                margin-top: 10px;
+            }
+        }
+    
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0 20px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-image"></i> <!-- Font Awesome Icon -->
+            <img src="" alt="">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="contentus.html">Contact Us</a></li>
+            <li><a href="teamcondition.html">Team & Conditions</a></li>
+      
+            <li><a href="privacypolicey.html">Privacy Policy</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Image Resizer</h1>
+        <input type="file" id="upload" accept="image/*" />
+        <div class="controls">
+            <label for="width">Width:</label>
+            <input type="number" id="width" placeholder="Width" />
+            <label for="height">Height:</label>
+            <input type="number" id="height" placeholder="Height" />
+            <button id="resizeBtn">Resize Image</button>
+        </div>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <img id="originalImage" src="" alt="Original Image" style="display:none;" />
+        <img id="output" src="" alt="Resized Image" />
+        <a id="download" href="#" download="resized-image.png" style="display:none;">Download Resized Image</a>
+    </div>
+  
+    <div class="container">
+        <h1>The Best Online Image Resizers for Reducing Image Size</h1>
+
+        <h2>Introduction to Online Image Resizers</h2>
+        <p>Image resizing is crucial for web performance and storage optimization. By reducing the file size of images, websites load faster, provide a better user experience, and save storage space.</p>
+        <p>Online image resizers are tools that allow users to resize and compress images easily without needing to download software. They offer various benefits, including accessibility and ease of use. This post focuses on 'image resizer mb' for effective file size reduction.</p>
+
+        <h2>Why Should You Resize Images?</h2>
+        <ul>
+            <li>Faster website loading times</li>
+            <li>Reduced storage space requirements</li>
+            <li>Improved user experience on various devices</li>
+            <li>Better SEO performance</li>
+            <li>Easier sharing on social media platforms</li>
+        </ul>
+
+        <h2>Top 5 Online Image Resizers for Reducing File Size</h2>
+        <ol>
+            <li>TinyPNG: Efficient PNG and JPEG compression</li>
+            <li>Squoosh: Google's powerful image optimization tool</li>
+            <li>ImageResizer.com: User-friendly interface with multiple options</li>
+            <li>BulkResizePhotos: Ideal for batch processing</li>
+            <li>BIRME: Simple and quick resizing tool</li>
+        </ol>
+
+        <h3>TinyPNG: The Go-To Tool for PNG and JPEG Compression</h3>
+        <p>TinyPNG uses smart lossy compression techniques to reduce file sizes without losing quality. It is incredibly easy to use: simply drag and drop your images into the browser window.</p>
+        <p>Pros: High compression rates, user-friendly.</p>
+        <p>Cons: Limited to PNG and JPEG formats.</p>
+        <p>Typical file size reduction: 50-80%.</p>
+
+        <h3>Squoosh: Google's Powerful Image Optimization Tool</h3>
+        <p>Squoosh is a versatile tool offering multiple compression algorithms. You can easily compare image quality as you adjust settings.</p>
+        <p>Pros: Supports many file formats, real-time comparison.</p>
+        <p>Cons: More complex for beginners.</p>
+
+        <h3>ImageResizer.com: User-Friendly Interface with Multiple Options</h3>
+        <p>ImageResizer.com allows resizing by percentage, pixels, or maintaining aspect ratio, making it suitable for various needs.</p>
+        <p>Pros: Simple interface, multiple options.</p>
+        <p>Cons: Limited advanced features.</p>
+
+        <h3>BulkResizePhotos: Ideal for Batch Processing</h3>
+        <p>BulkResizePhotos lets users resize multiple images at once, making it perfect for those working with large sets.</p>
+        <p>Pros: Fast, supports batch processing.</p>
+        <p>Cons: Fewer options for individual images.</p>
+
+        <h3>BIRME: Simple and Quick Resizing Tool</h3>
+        <p>BIRME (Batch Image Resizing Made Easy) focuses on quick and straightforward batch resizing.</p>
+        <p>Pros: Fast and easy to use.</p>
+        <p>Cons: Limited customization options.</p>
+
+        <h2>Comparison of Image Resizers: Which One Should You Choose?</h2>
+        <p>When choosing an image resizer, consider features like compression ratio, speed, and ease of use. Each tool has unique strengths, depending on your specific needs.</p>
+
+        <h2>Best Practices for Using Online Image Resizers</h2>
+        <ul>
+            <li>Choose the right file format for different types of images.</li>
+            <li>Balance image quality and file size.</li>
+            <li>Consider device and screen sizes when resizing.</li>
+            <li>Backup original images before resizing.</li>
+            <li>Use descriptive file names and alt text for SEO.</li>
+        </ul>
+
+        <h2>Conclusion: Optimizing Your Images for the Web</h2>
+        <p>Image resizing is vital for web performance. By utilizing the top online image resizers discussed, you can significantly enhance your website's efficiency. Don’t hesitate to experiment with different tools to find the best fit for your needs. The future of image optimization is bright, playing a crucial role in web development.</p>
+    </div>
+    <footer class="footer">
+        <div class="left">
+            <p>© 2024 Image Resizer. All rights reserved.</p>
+            <p>Follow us on social media:</p>
+            <p>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </p>
+        </div>
+        <div class="right">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Sed vel augue nec nisi vulputate. Integer in turpis quis dolor fermentum scelerisque.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('upload').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = new Image();
+                    img.src = e.target.result;
+                    img.onload = function () {
+                        // Set the original image to be displayed
+                        document.getElementById('output').src = img.src;
+                        document.getElementById('output').style.display = 'block';
+                        // Store the original image for resizing
+                        document.getElementById('originalImage').src = img.src;
+                    };
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('resizeBtn').addEventListener('click', function () {
+            const width = parseInt(document.getElementById('width').value);
+            const height = parseInt(document.getElementById('height').value);
+            const img = document.getElementById('originalImage');
+
+            if (img.src) {
+                const canvas = document.getElementById('canvas');
+                const ctx = canvas.getContext('2d');
+
+                // Clear previous canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                if (width && height) {
+                    // Set canvas size to the desired dimensions
+                    canvas.width = width;
+                    canvas.height = height;
+                    // Draw the image to the canvas at the new size
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    const resizedImage = canvas.toDataURL('image/png');
+                    document.getElementById('output').src = resizedImage;
+                    document.getElementById('download').href = resizedImage;
+                    document.getElementById('download').style.display = 'inline-block';
+                } else {
+                    alert('Please enter valid width and height');
+                }
+            } else {
+                alert('Please upload an image first');
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
