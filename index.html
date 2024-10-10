@@ -1,28 +1,18 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Title -->
     <title>Your Page Title | Brand Name</title>
-    
-    <!-- Meta Description -->
     <meta name="description" content="Your page description goes here. Make sure to keep it under 160 characters and use relevant keywords.">
-
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://example.com/your-page-url">
-
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Your Page Title | Brand Name">
     <meta property="og:description" content="Your page description for social media previews.">
     <meta property="og:url" content="https://example.com/your-page-url">
     <meta property="og:image" content="https://example.com/your-image.jpg">
-    
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,6 +22,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         .navbar {
             width: 97%;
             background-color: #007bff;
@@ -39,89 +30,86 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
+
         .logo {
             color: white;
             font-size: 1.5em;
             display: flex;
             align-items: center;
+            margin-left: 10%;
         }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
         .menu-toggle {
             display: none;
             flex-direction: column;
             cursor: pointer;
         }
+
         .menu-toggle .bar {
             height: 3px;
             width: 25px;
             background-color: white;
             margin: 3px 0;
         }
+
         .nav-list {
             list-style-type: none;
+            padding: 0;
+            margin: 0;
             display: flex;
         }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
         .nav-list a {
             color: white;
             text-decoration: none;
             padding: 8px 16px;
             border-radius: 4px;
+            transition: background 0.3s;
         }
+
         .nav-list a:hover {
             background-color: #0056b3;
         }
-        
-        /* Main container styling */
+
         .container {
             text-align: center;
             background: white;
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin: 20px auto;
             max-width: 600px;
             flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
-        /* Controls within the container, in a row on larger screens */
+        h1 {
+            margin-bottom: 20px;
+        }
+
         .controls {
             margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Media query for responsive column layout */
-        @media screen and (max-width: 768px) {
-            .container {
-                max-width: 100%;
-                padding: 10px;
-            }
-
-            /* Stack controls vertically */
-            .controls {
-                flex-direction: column;
-                margin: 10px 0;
-            }
-
-            input[type="number"] {
-                margin-bottom: 10px; /* Adds spacing between input fields */
-            }
-
-            button {
-                margin-top: 10px; /* Adds spacing above the resize button */
-            }
         }
 
         input[type="number"] {
             width: 70px;
             margin: 0 10px;
         }
+
         button {
             padding: 5px 10px;
             cursor: pointer;
         }
+
         #output {
             display: none;
             margin: 20px auto;
@@ -130,6 +118,7 @@
             border: 2px solid #007bff;
             border-radius: 8px;
         }
+
         a {
             display: inline-block;
             margin-top: 10px;
@@ -139,43 +128,208 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
         a:hover {
             background: #0056b3;
+        }
+        .container1 {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+
+        .container1 h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .container1 h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+        }
+
+        .container1 h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .container1 p, ul, ol {
+            font-size: 1.1em;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .container1 {
+                padding: 20px;
+            }
+
+            .container1 h1 {
+                font-size: 2.2em;
+            }
+
+            .container1 h2 {
+                font-size: 1.6em;
+            }
+
+            .container1 h3 {
+                font-size: 1.4em;
+            }
+
+            .container1 p, ul, ol {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container1 {
+                padding: 15px;
+            }
+
+            .container1 h1 {
+                font-size: 2em;
+            }
+
+            .container1 h2 {
+                font-size: 1.4em;
+            }
+
+            .container1 h3 {
+                font-size: 1.2em;
+            }
+
+            .container1 p, ul, ol {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container1 {
+                padding: 10px;
+            }
+
+            .container1 h1 {
+                font-size: 1.8em;
+            }
+
+            .container1 h2 {
+                font-size: 1.3em;
+            }
+
+            .container1 h3 {
+                font-size: 1.1em;
+            }
+
+            .container1 p, ul, ol {
+                font-size: 0.85em;
+            }
         }
         .footer {
             background-color: #007bff;
             color: white;
-            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px;
+            margin-top: auto;
         }
+
+        .footer .left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer .right {
+            max-width: 50%;
+        }
+
         @media screen and (max-width: 768px) {
+            .navbar {
+                width: 93%;
+            }
             .menu-toggle {
                 display: flex;
             }
+
             .nav-list {
                 display: none;
                 flex-direction: column;
+                width: 92.3%;
                 background-color: #007bff;
                 position: absolute;
                 top: 60px;
                 left: 0;
-                width: 100%;
             }
+
             .nav-list.active {
                 display: flex;
+            }
+
+            .nav-list li {
+                margin: 10px 0;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer .right {
+                max-width: 100%;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+            }
+            .container {
+                margin: 20% auto;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 10% auto;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logo">
-            <i class="fas fa-image"></i> Logo
+            <i class="fas fa-image"></i>
+            Logo
         </div>
-       
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -183,11 +337,13 @@
         </div>
         <ul class="nav-list">
             <li><a href="#home">Home</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="contentus.html">Contact Us</a></li>
+            <li><a href="teamcondition.html">Terms & Conditions</a></li>
+            <li><a href="privacypolicey.html">Privacy Policy</a></li>
+            <li><a href="about.html">About Us</a></li>
         </ul>
     </nav>
-    
+
     <div class="container">
         <h1>Image Resizer</h1>
         <input type="file" id="upload" accept="image/*" />
@@ -199,12 +355,84 @@
             <button id="resizeBtn">Resize Image</button>
         </div>
         <canvas id="canvas" style="display: none;"></canvas>
+        <img id="originalImage" src="" alt="Original Image" style="display:none;" />
         <img id="output" src="" alt="Resized Image" />
         <a id="download" href="#" download="resized-image.png" style="display:none;">Download Resized Image</a>
     </div>
+    <div class="container1">
+        <h1>The Best Online Image Resizers for Reducing Image Size</h1>
+
+        <h2>Introduction to Online Image Resizers</h2>
+        <p>Image resizing is crucial for web performance and storage optimization. By reducing the file size of images, websites load faster, provide a better user experience, and save storage space.</p>
+        <p>Online image resizers are tools that allow users to resize and compress images easily without needing to download software. They offer various benefits, including accessibility and ease of use. This post focuses on 'image resizer mb' for effective file size reduction.</p>
+
+        <h2>Why Should You Resize Images?</h2>
+        <ul>
+            <li>Faster website loading times</li>
+            <li>Reduced storage space requirements</li>
+            <li>Improved user experience on various devices</li>
+            <li>Better SEO performance</li>
+            <li>Easier sharing on social media platforms</li>
+        </ul>
+
+        <h2>Top 5 Online Image Resizers for Reducing File Size</h2>
+        <ol>
+            <li>TinyPNG: Efficient PNG and JPEG compression</li>
+            <li>Squoosh: Google's powerful image optimization tool</li>
+            <li>ImageResizer.com: User-friendly interface with multiple options</li>
+            <li>BulkResizePhotos: Ideal for batch processing</li>
+            <li>BIRME: Simple and quick resizing tool</li>
+        </ol>
+
+        <h3>TinyPNG: The Go-To Tool for PNG and JPEG Compression</h3>
+        <p>TinyPNG uses smart lossy compression techniques to reduce file sizes without losing quality. It is incredibly easy to use: simply drag and drop your images into the browser window.</p>
+        <p>Pros: High compression rates, user-friendly.</p>
+        <p>Cons: Limited to PNG and JPEG formats.</p>
+        <p>Typical file size reduction: 50-80%.</p>
+
+        <h3>Squoosh: Google's Powerful Image Optimization Tool</h3>
+        <p>Squoosh is a versatile tool offering multiple compression algorithms. You can easily compare image quality as you adjust settings.</p>
+        <p>Pros: Supports many file formats, real-time comparison.</p>
+        <p>Cons: More complex for beginners.</p>
+
+        <h3>ImageResizer.com: User-Friendly Interface with Multiple Options</h3>
+        <p>ImageResizer.com allows resizing by percentage, pixels, or maintaining aspect ratio, making it suitable for various needs.</p>
+        <p>Pros: Simple interface, multiple options.</p>
+        <p>Cons: Limited advanced features.</p>
+
+        <h3>BulkResizePhotos: Ideal for Batch Processing</h3>
+        <p>BulkResizePhotos lets users resize multiple images at once, making it perfect for those working with large sets.</p>
+        <p>Pros: Fast, supports batch processing.</p>
+        <p>Cons: Fewer options for individual images.</p>
+
+        <h3>BIRME: Simple and Quick Resizing Tool</h3>
+        <p>BIRME (Batch Image Resizing Made Easy) focuses on quick and straightforward batch resizing.</p>
+        <p>Pros: Fast and easy to use.</p>
+        <p>Cons: Limited customization options.</p>
+
+        <h2>Comparison of Image Resizers: Which One Should You Choose?</h2>
+        <p>When choosing an image resizer, consider features like compression ratio, speed, and ease of use. Each tool has unique strengths, depending on your specific needs.</p>
+
+        <h2>Best Practices for Using Online Image Resizers</h2>
+        <ul>
+            <li>Choose the right file format for different types of images.</li>
+            <li>Balance image quality and file size.</li>
+            <li>Consider device and screen sizes when resizing.</li>
+            <li>Backup original images before resizing.</li>
+            <li>Use descriptive file names and alt text for SEO.</li>
+        </ul>
+
+        <h2>Conclusion: Optimizing Your Images for the Web</h2>
+        <p>Image resizing is vital for web performance. By utilizing the top online image resizers discussed, you can significantly enhance your website's efficiency. Don’t hesitate to experiment with different tools to find the best fit for your needs. The future of image optimization is bright, playing a crucial role in web development.</p>
+    </div>
 
     <footer class="footer">
-        <p>© 2024 Image Resizer. All rights reserved.</p>
+        <div class="left">
+            <p>© 2024 Image Resizer. All rights reserved.</p>
+        </div>
+        <div class="right">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
     </footer>
 
     <script>
@@ -216,8 +444,10 @@
                     const img = new Image();
                     img.src = e.target.result;
                     img.onload = function () {
+                        // Set the original image and populate width/height inputs
                         document.getElementById('output').src = img.src;
                         document.getElementById('output').style.display = 'block';
+                        document.getElementById('originalImage').src = img.src;
                         document.getElementById('width').value = img.width;
                         document.getElementById('height').value = img.height;
                     };
@@ -229,33 +459,37 @@
         document.getElementById('resizeBtn').addEventListener('click', function () {
             const width = parseInt(document.getElementById('width').value);
             const height = parseInt(document.getElementById('height').value);
-            const img = new Image();
-            img.src = document.getElementById('output').src;
+            const img = document.getElementById('originalImage');
 
-            const quality = 0.8; // Set image quality (0 to 1) – adjust this to reduce resolution
-            if (width && height) {
+            if (img.src) {
                 const canvas = document.getElementById('canvas');
                 const ctx = canvas.getContext('2d');
-                canvas.width = width;
-                canvas.height = height;
-                ctx.drawImage(img, 0, 0, width, height);
 
-                // Set file type to JPEG and quality for compression, adjust the quality as needed
-                const resizedImage = canvas.toDataURL('image/jpeg', quality);
-                
-                // Update the image src and download link
-                document.getElementById('output').src = resizedImage;
-                document.getElementById('download').href = resizedImage;
-                document.getElementById('download').style.display = 'inline-block';
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                if (width && height) {
+                    canvas.width = width;
+                    canvas.height = height
+                    canvas.width = width;
+                    canvas.height = height;
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    const resizedImage = canvas.toDataURL('image/png');
+                    document.getElementById('output').src = resizedImage;
+                    document.getElementById('download').href = resizedImage;
+                    document.getElementById('download').style.display = 'inline-block';
+                } else {
+                    alert('Please enter valid width and height');
+                }
             } else {
-                alert('Please enter valid width and height');
+                alert('Please upload an image first');
             }
         });
 
-        document.getElementById('mobile-menu').addEventListener('click', function () {
-            document.querySelector('.nav-list').classList.toggle('active');
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
         });
     </script>
 </body>
 </html>
-
